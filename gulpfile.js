@@ -19,14 +19,14 @@ gulp.task('styles', function() {
     .pipe(plumber({ errorHandler: errorHandler }))
     .pipe(sass({ indentedSyntax: true }).on('error', util.log))
     .pipe(concat('application.css'))
-    .pipe(gulp.dest('./app/css'))
+    .pipe(gulp.dest('./css'))
     .pipe(browserSync.reload({ stream:true }))
 });
 
 gulp.task('serve', function() {
   browserSync.init({
     server: {
-      baseDir: "./app/"
+      baseDir: "./"
     }
   });
   watch('./src/sass/**/*.sass', function(){ gulp.start('styles'); })

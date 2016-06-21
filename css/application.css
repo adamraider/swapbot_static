@@ -1,0 +1,93 @@
+.swapbot-embed {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  color: #272a2b;
+  max-width: 620px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 10%;
+  background-color: #F0F1F2;
+  position: relative; }
+  .swapbot-embed a {
+    color: #0275d8;
+    text-decoration: none; }
+  .swapbot-embed .embed-content {
+    margin: 0 auto;
+    padding: 60px 10px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .swapbot-embed .embed-content .heading {
+      font-size: 22px;
+      margin-bottom: 1em; }
+    .swapbot-embed .embed-content .tokens-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 30px; }
+      @media only screen and (min-width: 600px) {
+        .swapbot-embed .embed-content .tokens-container {
+          flex-direction: row; } }
+      .swapbot-embed .embed-content .tokens-container .token-divider {
+        margin: 0 40px;
+        color: #9B9B9B; }
+      .swapbot-embed .embed-content .tokens-container .token {
+        width: 100%;
+        flex-grow: 1.2; }
+        .swapbot-embed .embed-content .tokens-container .token .token-heading {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 14px;
+          padding-bottom: 2px;
+          border-bottom: 2px solid #9B9B9B;
+          margin-bottom: 10px;
+          color: #9B9B9B; }
+        .swapbot-embed .embed-content .tokens-container .token input, .swapbot-embed .embed-content .tokens-container .token select, .swapbot-embed .embed-content .tokens-container .token textarea {
+          padding: 4px 0;
+          font-size: 16px;
+          display: block;
+          width: 100%;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          border-bottom: 2px solid #D8DCDE;
+          border-radius: 0; }
+          .swapbot-embed .embed-content .tokens-container .token input:not(:last-child), .swapbot-embed .embed-content .tokens-container .token select:not(:last-child), .swapbot-embed .embed-content .tokens-container .token textarea:not(:last-child) {
+            margin-bottom: 10px; }
+        .swapbot-embed .embed-content .tokens-container .token select {
+          -webkit-appearance: initial;
+          color: #0275d8; }
+    .swapbot-embed .embed-content .btn-success {
+      background-color: #2ECC71;
+      color: #fff;
+      padding: 14px 40px;
+      outline: none;
+      border: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border-radius: 4px; }
+      .swapbot-embed .embed-content .btn-success:hover {
+        background-color: #4cd787;
+        cursor: pointer; }
+  .swapbot-embed .embed-footer {
+    color: #9B9B9B;
+    text-align: right; }
+  .swapbot-embed .progress-bar {
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #D8DCDE; }
+    .swapbot-embed .progress-bar .progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25%;
+      height: 4px;
+      background-color: #0275d8; }

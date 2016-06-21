@@ -1,0 +1,98 @@
+@mixin btn($color)
+  background-color: $color
+  color: #fff
+  padding: 14px 40px
+  outline: none
+  border: none
+  text-transform: uppercase
+  font-weight: bold
+  letter-spacing: 1px
+  border-radius: 4px
+  &:hover
+    background-color: lighten($color, 8%)
+    cursor: pointer
+
+.swapbot-embed
+  font-family: $font-stack
+  color: $gray-dark
+  max-width: 620px
+  padding: 20px
+  margin: 0 auto
+  margin-top: 10%
+  background-color: $background-color
+  position: relative
+  a
+    color: $brand-primary
+    text-decoration: none
+  .embed-content
+    margin: 0 auto
+    padding: 60px 10px
+    max-width: 90%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    .heading
+      font-size: 22px
+      margin-bottom: 1em
+    .tokens-container
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: center
+      width: 100%
+      margin-bottom: 30px
+      @media #{$tablet}
+        flex-direction: row
+      .token-divider
+        margin: 0 40px
+        color: $gray
+      .token
+        width: 100%
+        flex-grow: 1.2
+        .token-heading
+          text-transform: uppercase
+          font-weight: bold
+          font-size: 14px
+          padding-bottom: 2px
+          border-bottom: 2px solid $gray
+          margin-bottom: 10px
+          color: $gray
+        input, select, textarea
+          padding: 4px 0
+          font-size: 16px
+          display: block
+          width: 100%
+          border: none
+          outline: none
+          background-color: transparent
+          border-bottom: 2px solid $gray-light
+          border-radius: 0
+          &:not(:last-child)
+            margin-bottom: 10px
+        select
+          -webkit-appearance: initial
+          color: $brand-primary
+
+    .btn-success
+      +btn($brand-green)
+  .embed-footer
+    color: $gray
+    text-align: right
+  $progress-height: 4px
+  $progress-color: $brand-primary
+  .progress-bar
+    width: 100%
+    height: $progress-height
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    background-color: $gray-light
+    .progress
+      position: absolute
+      top: 0
+      left: 0
+      width: 25%
+      height: $progress-height
+      background-color: $brand-primary
