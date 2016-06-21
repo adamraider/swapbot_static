@@ -18,7 +18,7 @@
   max-width: 620px
   padding: 20px
   margin: 0 auto
-  margin-top: 10%
+  margin-top: 100px
   background-color: $background-color
   position: relative
   a
@@ -45,8 +45,18 @@
       @media #{$tablet}
         flex-direction: row
       .token-divider
-        margin: 0 40px
+        margin: 20px 40px
         color: $gray
+        .arrow-down
+          display: inline
+        .arrow-right
+          display: none
+        @media #{$tablet}
+          .arrow-down
+            display: none
+          .arrow-right
+            display: inline
+          margin: 0 40px
       .token
         width: 100%
         flex-grow: 1.2

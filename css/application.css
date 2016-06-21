@@ -4,7 +4,7 @@
   max-width: 620px;
   padding: 20px;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 100px;
   background-color: #F0F1F2;
   position: relative; }
   .swapbot-embed a {
@@ -32,8 +32,19 @@
         .swapbot-embed .embed-content .tokens-container {
           flex-direction: row; } }
       .swapbot-embed .embed-content .tokens-container .token-divider {
-        margin: 0 40px;
+        margin: 20px 40px;
         color: #9B9B9B; }
+        .swapbot-embed .embed-content .tokens-container .token-divider .arrow-down {
+          display: inline; }
+        .swapbot-embed .embed-content .tokens-container .token-divider .arrow-right {
+          display: none; }
+        @media only screen and (min-width: 600px) {
+          .swapbot-embed .embed-content .tokens-container .token-divider {
+            margin: 0 40px; }
+            .swapbot-embed .embed-content .tokens-container .token-divider .arrow-down {
+              display: none; }
+            .swapbot-embed .embed-content .tokens-container .token-divider .arrow-right {
+              display: inline; } }
       .swapbot-embed .embed-content .tokens-container .token {
         width: 100%;
         flex-grow: 1.2; }
