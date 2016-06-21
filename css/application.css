@@ -58,7 +58,7 @@
           color: #9B9B9B; }
         .swapbot-embed .embed-content .tokens-container .token input, .swapbot-embed .embed-content .tokens-container .token select, .swapbot-embed .embed-content .tokens-container .token textarea {
           padding: 4px 0;
-          font-size: 16px;
+          font-size: 18px;
           display: block;
           width: 100%;
           border: none;
@@ -69,6 +69,7 @@
           .swapbot-embed .embed-content .tokens-container .token input:not(:last-child), .swapbot-embed .embed-content .tokens-container .token select:not(:last-child), .swapbot-embed .embed-content .tokens-container .token textarea:not(:last-child) {
             margin-bottom: 10px; }
         .swapbot-embed .embed-content .tokens-container .token select {
+          text-transform: uppercase;
           -webkit-appearance: initial;
           color: #0275d8; }
     .swapbot-embed .embed-content .btn-success {
