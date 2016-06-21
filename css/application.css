@@ -1,5 +1,14 @@
+@font-face {
+  font-family: ProximaNova;
+  src: url(../fonts/ProximaNova-Regular.otf); }
+
+@font-face {
+  font-family: ProximaNova;
+  src: url(../fonts/ProximaNova-Bold.otf);
+  font-weight: bold; }
+
 .swapbot-embed {
-  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-family: "ProximaNova", "HelveticaNeue", Helvetica, Arial, sans-serif;
   color: #272a2b;
   max-width: 620px;
   padding: 20px;
@@ -10,6 +19,8 @@
   .swapbot-embed a {
     color: #0275d8;
     text-decoration: none; }
+    .swapbot-embed a:hover {
+      color: #108ffd; }
   .swapbot-embed .embed-content {
     margin: 0 auto;
     padding: 60px 10px;
@@ -49,6 +60,7 @@
         width: 100%;
         flex-grow: 1.2; }
         .swapbot-embed .embed-content .tokens-container .token .token-heading {
+          letter-spacing: 1px;
           text-transform: uppercase;
           font-weight: bold;
           font-size: 14px;
