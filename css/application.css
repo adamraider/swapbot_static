@@ -13,14 +13,33 @@
   max-width: 620px;
   padding: 20px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-bottom: 40px;
   background-color: #F0F1F2;
-  position: relative; }
+  position: relative;
+  line-height: 1.5; }
   .swapbot-embed a {
     color: #0275d8;
     text-decoration: none; }
     .swapbot-embed a:hover {
       color: #108ffd; }
+  .swapbot-embed .heading {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 1.5em;
+    max-width: 500px;
+    line-height: 1.3; }
+  .swapbot-embed .redeem-text, .swapbot-embed .review-text {
+    color: #9B9B9B;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 0; }
+  .swapbot-embed .review-text {
+    font-size: 24px;
+    line-height: 1.3; }
+  .swapbot-embed .redeem-text {
+    margin-bottom: 30px; }
+  .swapbot-embed .token-text {
+    color: #272a2b; }
   .swapbot-embed .embed-content {
     margin: 0 auto;
     padding: 60px 10px;
@@ -29,10 +48,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center; }
-    .swapbot-embed .embed-content .heading {
-      font-size: 22px;
-      margin-bottom: 1em; }
-    .swapbot-embed .embed-content .tokens-container {
+    .swapbot-embed .embed-content .tokens-container, .swapbot-embed .embed-content .buttons-container {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -40,65 +56,112 @@
       width: 100%;
       margin-bottom: 30px; }
       @media only screen and (min-width: 600px) {
-        .swapbot-embed .embed-content .tokens-container {
+        .swapbot-embed .embed-content .tokens-container, .swapbot-embed .embed-content .buttons-container {
           flex-direction: row; } }
-      .swapbot-embed .embed-content .tokens-container .token-divider {
-        margin: 20px 40px;
+    .swapbot-embed .embed-content .tokens-container .token-divider {
+      margin: 20px 40px;
+      color: #9B9B9B; }
+      .swapbot-embed .embed-content .tokens-container .token-divider .arrow-down {
+        display: inline; }
+      .swapbot-embed .embed-content .tokens-container .token-divider .arrow-right {
+        display: none; }
+      @media only screen and (min-width: 600px) {
+        .swapbot-embed .embed-content .tokens-container .token-divider {
+          margin: 0 40px; }
+          .swapbot-embed .embed-content .tokens-container .token-divider .arrow-down {
+            display: none; }
+          .swapbot-embed .embed-content .tokens-container .token-divider .arrow-right {
+            display: inline; } }
+    .swapbot-embed .embed-content .tokens-container .token {
+      width: 100%;
+      flex-grow: 1.2; }
+      .swapbot-embed .embed-content .tokens-container .token .token-heading {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        padding-bottom: 2px;
+        border-bottom: 2px solid #9B9B9B;
+        margin-bottom: 10px;
         color: #9B9B9B; }
-        .swapbot-embed .embed-content .tokens-container .token-divider .arrow-down {
-          display: inline; }
-        .swapbot-embed .embed-content .tokens-container .token-divider .arrow-right {
-          display: none; }
-        @media only screen and (min-width: 600px) {
-          .swapbot-embed .embed-content .tokens-container .token-divider {
-            margin: 0 40px; }
-            .swapbot-embed .embed-content .tokens-container .token-divider .arrow-down {
-              display: none; }
-            .swapbot-embed .embed-content .tokens-container .token-divider .arrow-right {
-              display: inline; } }
-      .swapbot-embed .embed-content .tokens-container .token {
+      .swapbot-embed .embed-content .tokens-container .token input, .swapbot-embed .embed-content .tokens-container .token select, .swapbot-embed .embed-content .tokens-container .token textarea {
+        padding: 4px 0;
+        font-size: 18px;
+        display: block;
         width: 100%;
-        flex-grow: 1.2; }
-        .swapbot-embed .embed-content .tokens-container .token .token-heading {
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          font-weight: bold;
-          font-size: 14px;
-          padding-bottom: 2px;
-          border-bottom: 2px solid #9B9B9B;
-          margin-bottom: 10px;
-          color: #9B9B9B; }
-        .swapbot-embed .embed-content .tokens-container .token input, .swapbot-embed .embed-content .tokens-container .token select, .swapbot-embed .embed-content .tokens-container .token textarea {
-          padding: 4px 0;
-          font-size: 18px;
-          display: block;
-          width: 100%;
-          border: none;
-          outline: none;
-          background-color: transparent;
-          border-bottom: 2px solid #D8DCDE;
-          border-radius: 0;
-          font-weight: 300;
-          letter-spacing: 1px; }
-          .swapbot-embed .embed-content .tokens-container .token input:not(:last-child), .swapbot-embed .embed-content .tokens-container .token select:not(:last-child), .swapbot-embed .embed-content .tokens-container .token textarea:not(:last-child) {
-            margin-bottom: 10px; }
-        .swapbot-embed .embed-content .tokens-container .token select {
-          text-transform: uppercase;
-          -webkit-appearance: initial;
-          color: #0275d8; }
-    .swapbot-embed .embed-content .btn-success {
-      background-color: #2ECC71;
-      color: #fff;
-      padding: 14px 40px;
-      outline: none;
-      border: none;
-      text-transform: uppercase;
-      font-weight: bold;
-      letter-spacing: 1px;
-      border-radius: 4px; }
-      .swapbot-embed .embed-content .btn-success:hover {
-        background-color: #4cd787;
-        cursor: pointer; }
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-bottom: 2px solid #D8DCDE;
+        border-radius: 0;
+        font-weight: 300;
+        letter-spacing: 1px; }
+        .swapbot-embed .embed-content .tokens-container .token input:not(:last-child), .swapbot-embed .embed-content .tokens-container .token select:not(:last-child), .swapbot-embed .embed-content .tokens-container .token textarea:not(:last-child) {
+          margin-bottom: 10px; }
+      .swapbot-embed .embed-content .tokens-container .token select {
+        text-transform: uppercase;
+        -webkit-appearance: initial;
+        color: #0275d8; }
+  .swapbot-embed .buttons-container {
+    max-width: 500px; }
+    .swapbot-embed .buttons-container > :not(:last-child) {
+      margin-bottom: 10px; }
+      @media only screen and (min-width: 600px) {
+        .swapbot-embed .buttons-container > :not(:last-child) {
+          margin-bottom: 0; } }
+    .swapbot-embed .buttons-container .btn-flex {
+      width: 100%;
+      flex-grow: 1;
+      margin-left: 10px;
+      margin-right: 10px; }
+    .swapbot-embed .buttons-container.buttons-pay-container {
+      justify-content: space-around; }
+  .swapbot-embed .btn-success {
+    background-color: #2ECC71;
+    color: #fff;
+    padding: 14px 40px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px; }
+    .swapbot-embed .btn-success:hover {
+      background-color: #4cd787;
+      cursor: pointer; }
+  .swapbot-embed .btn-danger {
+    background-color: #FF7857;
+    color: #fff;
+    padding: 14px 40px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px; }
+    .swapbot-embed .btn-danger:hover {
+      background-color: #ff9980;
+      cursor: pointer; }
+  .swapbot-embed .btn-pockets img {
+    float: left; }
+  .swapbot-embed .btn-qrcode {
+    background-color: #2ECC71;
+    color: #fff;
+    padding: 14px 40px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    width: 156px;
+    height: 56px;
+    padding: 0; }
+    .swapbot-embed .btn-qrcode:hover {
+      background-color: #4cd787;
+      cursor: pointer; }
+    .swapbot-embed .btn-qrcode i {
+      font-size: 44px; }
   .swapbot-embed .embed-footer {
     color: #9B9B9B;
     text-align: right; }
@@ -114,6 +177,5 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 25%;
       height: 4px;
       background-color: #0275d8; }

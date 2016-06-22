@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="./css/application.css">
-  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/0402fb5473/UntitledProject/style.css">
+  <link rel="stylesheet" href="./css/fontello.css">
 </head>
 <body>
+  <!-- STEP 1 -->
   <div id="swapbot-embed" class="swapbot-embed">
     <div class="progress-bar">
       <div class="progress" data-progress="25%"></div>
@@ -30,8 +31,8 @@
           <input type="number" name="quantity" value="2">
         </div>
         <div class="token-divider">
-          <span class="arrow-right icon-arrow-right2"></span>
-          <span class="arrow-down icon-arrow-down2"></span>
+          <i class="arrow-right icon-right"></i>
+          <i class="arrow-down icon-down"></i>
         </div>
         <div class="token">
           <div class="token-heading">Send</div>
@@ -51,8 +52,77 @@
       a <a href="#">swapbot</a> powered by <a href="#">tokenly</a>
     </div>
   </div>
+  <!-- END STEP 1 -->
+
+  <!-- STEP 2 -->
+  <div id="swapbot-embed" class="swapbot-embed">
+    <div class="progress-bar">
+      <div class="progress" data-progress="50%"></div>
+    </div>
+    <div class="embed-content">
+      <div class="heading">
+        Are you using a counterparty compatible bitcoin wallet?
+      </div>
+
+      <div class="buttons-container">
+        <button class="btn-flex btn-success">Yes</button>
+        <button class="btn-flex btn-danger">No</button>
+      </div>
+      <span><a href="#">Not sure?</a></span>
+    </div>
+    <div class="embed-footer">
+      a <a href="#">swapbot</a> powered by <a href="#">tokenly</a>
+    </div>
+  </div>
+  <!-- END STEP 2 -->
+
+
+  <!-- STEP 3 -->
+  <div id="swapbot-embed" class="swapbot-embed">
+    <div class="progress-bar">
+      <div class="progress" data-progress="75%"></div>
+    </div>
+    <div class="embed-content">
+      <div class="heading">
+        Review & Redeem
+      </div>
+      <p class="review-text">
+        You are sending 
+        <span class="token-text">
+          0.01484183 
+          <a href="#">BTC</a>
+        </span> 
+        <br/>
+        and receiving 
+        <span class="token-text">
+          2 <a href="#">TOKENLY</a>
+        </span>
+      </p>
+
+      <p class="redeem-text">
+        To begin this swap send 
+        <span class="token-text">0.01484183 BTC ($10.02)</span>
+        to 
+        <span class="token-text">129R8WgXMxwCargMeEzzwtEaSvEMdd19ry</span>.
+      </p>
+      <div class="buttons-container buttons-pay-container">
+        <a href="#" class="btn-pockets"><img src="./images/paywithpockets.png" alt=""></a>
+        <button class="btn-qrcode"><i class="icon-qrcode"></i></button>
+      </div>
+    </div>
+    <div class="embed-footer">
+      a <a href="#">swapbot</a> powered by <a href="#">tokenly</a>
+    </div>
+  </div>
+  <!-- END STEP 3 -->
+
   <script>
-    
+    // Set correct length of progress bars
+    var progressBars = document.getElementsByClassName('progress');
+    for (var i = 0; i < progressBars.length; i++){
+      var bar = progressBars[i]
+      bar.style.width = bar.dataset.progress;
+    }
   </script>
 </body>
 </html>
