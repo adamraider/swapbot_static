@@ -145,6 +145,12 @@
       cursor: pointer; }
   .swapbot-embed .btn-pockets img {
     float: left; }
+  .swapbot-embed .btn-back {
+    float: left;
+    color: #0275d8; }
+    .swapbot-embed .btn-back:hover {
+      color: #108ffd;
+      cursor: pointer; }
   .swapbot-embed .btn-qrcode {
     background-color: #2ECC71;
     color: #fff;

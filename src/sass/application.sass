@@ -169,6 +169,12 @@ $tablet: "only screen and (min-width : 600px)"
   .btn-pockets
     img
       float: left
+  .btn-back
+    float: left
+    color: $brand-primary
+    &:hover
+      color: lighten($brand-primary, 10%)
+      cursor: pointer
   .btn-qrcode
     +btn($brand-green)
     width: 156px
